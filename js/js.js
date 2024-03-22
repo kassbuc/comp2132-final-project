@@ -1,17 +1,17 @@
 // JQuery for the peter pan themed hang man game - Assignment 9
 
 // Set image paths
-const $image1 = './images/hangman-1.png';
-const $image2 = './images/hangman-2.png';
-const $image3 = './images/hangman-3.png';
-const $image4 = './images/hangman-4.png';
-const $image5 = './images/hangman-5.png';
-const $image6 = './images/hangman-6.png';
+const $image1 = 'images/hangman-1.png';
+const $image2 = 'images/hangman-2.png';
+const $image3 = 'images/hangman-3.png';
+const $image4 = 'images/hangman-4.png';
+const $image5 = 'images/hangman-5.png';
+const $image6 = 'images/hangman-6.png';
 
 //                      FETCH REQUEST
 // ------------------------------------------------------------------
 // fetch JSON words from file
-const $fetchFileURL = './json/words.json';
+const $fetchFileURL = 'json/words.json';
 
 fetch($fetchFileURL)
 .then(function( response ){
@@ -22,9 +22,7 @@ fetch($fetchFileURL)
     }
 })
 .then(function( incomingData ){
-    //const $jsonWords = JSON.parse( incomingData );
     $arrayOfWords = incomingData.map( words => words.word.toUpperCase() );
-    //const $jsonHints = JSON.parse( incomingData );
     $arrayOfHints = incomingData.map( hints => hints.hint );
 
 //                          SET UP
@@ -91,7 +89,7 @@ $("button").click(function(){
         }
     }
     else if( $guessesRemaining == 1 && $found == false) {
-        Animation( 'YOU LOSE!', './images/loser.webp' );
+        Animation( 'YOU LOSE!', 'images/loser.webp' );
     }  
 });
 
@@ -156,7 +154,7 @@ function checkLetter( $letter ){
 
         if( $lettersTillWin.length == 0 ){
             // animate slow popup
-            Animation('YOU WIN!', './images/winner.gif');
+            Animation('YOU WIN!', 'images/winner.gif');
         }
     }
     return $found;
