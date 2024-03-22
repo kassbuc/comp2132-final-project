@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  background-color: #4ec9b9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-gap: 1px;
+  background-color: #b15e74;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+button, input[type=button] {
+  border: 2px solid #b42d51;
+  background-color: #b15e74;
+  text-align: center;
+  align-items: center;
+  border-radius: 7px;
+  padding: 20px 0;
+  box-shadow: 3px 3px 5px inset white;
+  cursor: pointer;
+}
+
+button:hover, input[type=button]:hover {
+  background-color: #9d3d56;
+}
+
+.background-img {
+  width: 100%;
+}
+
+main {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  border: 5px solid #139f8f;
+}
+main main p {
+  padding: 0 5px;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(78, 201, 185, 0.9);
+}
+
+.overlay {
+  margin-top: 30%;
+  transform: translate(0, -50%);
+}
+.overlay img {
+  width: 100%;
+  max-width: 500px;
+}
+.overlay input[type=button] {
+  width: 150px;
+}
+
+#captain {
+  position: absolute;
+  width: 50%;
+  top: 10%;
+  right: 10px;
+  max-width: 400px;
+}
+
+#aligator {
+  position: absolute;
+  width: 40%;
+  top: 30%;
+  left: 0;
+  max-width: 500px;
+}
+
+#aligator-captain {
+  position: absolute;
+  width: 30%;
+  top: 1%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+#secret-word {
+  display: flex;
+  justify-content: center;
+}
+#secret-word div {
+  border-bottom: 2px solid black;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+h1 {
+  background-color: #b15e74;
+  margin: 0;
+  padding: 10px 10px;
+  text-align: center;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 1030px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+  }
+  .background-img {
+    height: 500px;
+    overflow: hidden;
+  }
+  #aligator {
+    top: 30%;
+  }
+  #captain {
+    top: 15%;
+  }
+  .keyboard {
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  }
+  .overlay img {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #aligator-captain {
+    width: 40%;
+  }
+  .background-img {
+    height: 400px;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .background-img {
+    height: 300px;
+    overflow: hidden;
+  }
+}
